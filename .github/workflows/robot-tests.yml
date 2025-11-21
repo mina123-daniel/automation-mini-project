@@ -9,12 +9,12 @@ on:
 
 jobs:
   robot-tests:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       # 1) Checkout repo
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # 2) Install Python
       - name: Setup Python
@@ -43,7 +43,7 @@ jobs:
 
       # 7) Upload artifacts (logs + report + screenshots)
       - name: Upload Test Reports
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: robot-test-results
           path: results/
