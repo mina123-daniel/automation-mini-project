@@ -28,20 +28,22 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Print Working Directory
+        run: pwd
+
+      - name: List all files
+        run: ls -R
+
       # 4) Install browser for Selenium (Chrome)
       - name: Install Chrome
         uses: browser-actions/setup-chrome@v1
 
-      # 5) Set chromedriver
-      - name: Install Chromedriver
-        uses: nanasess/setup-chromedriver@v2
-
-      # 6) Run Robot Tests
+      # 5) Run Robot Tests
       - name: Run Robot Tests
         run: |
           robot -d results tests
 
-      # 7) Upload artifacts (logs + report + screenshots)
+      # 6) Upload artifacts (logs + report + screenshots)
       - name: Upload Test Reports
         uses: actions/upload-artifact@v4
         with:
