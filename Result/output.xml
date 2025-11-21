@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.14.0 on win32)" generated="20251121 15:37:36.403" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.14.0 on win32)" generated="20251121 17:23:30.781" rpa="false" schemaversion="3">
 <suite id="s1" name="User E2E" source="C:\development\automation-Mini-project\automation-mini-project\Tests\E2E\user_e2e.robot">
 <test id="s1-t1" name="End To End Demo: Api To Db To Ui" line="9">
 <kw name="Log To Console" library="BuiltIn">
 <arg>Now createing the API Session</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20251121 15:37:36.917" endtime="20251121 15:37:36.917"/>
+<status status="PASS" starttime="20251121 17:23:31.122" endtime="20251121 17:23:31.122"/>
 </kw>
 <kw name="Create API Session" library="Api">
 <kw name="Create Dictionary" library="BuiltIn">
 <var>&amp;{headers}</var>
 <arg>x-api-key=${REQRES_API_KEY}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20251121 15:37:36.918" level="INFO">&amp;{headers} = { x-api-key=reqres-free-v1 }</msg>
-<status status="PASS" starttime="20251121 15:37:36.918" endtime="20251121 15:37:36.918"/>
+<msg timestamp="20251121 17:23:31.123" level="INFO">&amp;{headers} = { x-api-key=reqres-free-v1 }</msg>
+<status status="PASS" starttime="20251121 17:23:31.122" endtime="20251121 17:23:31.123"/>
 </kw>
 <kw name="Create Session" library="RequestsLibrary">
 <arg>users_api</arg>
 <arg>${API_BASE_URL}</arg>
 <arg>headers=${headers}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20251121 15:37:36.918" level="INFO">Creating Session using : alias=users_api, url=https://reqres.in/api, headers={'x-api-key': 'reqres-free-v1'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20251121 15:37:36.918" endtime="20251121 15:37:36.919"/>
+<msg timestamp="20251121 17:23:31.123" level="INFO">Creating Session using : alias=users_api, url=https://reqres.in/api, headers={'x-api-key': 'reqres-free-v1'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20251121 17:23:31.123" endtime="20251121 17:23:31.123"/>
 </kw>
-<status status="PASS" starttime="20251121 15:37:36.918" endtime="20251121 15:37:36.919"/>
+<status status="PASS" starttime="20251121 17:23:31.122" endtime="20251121 17:23:31.123"/>
 </kw>
 <kw name="Get User By Id" library="Api">
 <var>${body}</var>
@@ -33,64 +33,64 @@
 <arg>users_api</arg>
 <arg>/users/${user_id}</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<msg timestamp="20251121 15:37:37.129" level="INFO">GET Request : url=https://reqres.in/api/users/2 
+<msg timestamp="20251121 17:23:31.255" level="INFO">GET Request : url=https://reqres.in/api/users/2 
  path_url=/api/users/2 
  headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'x-api-key': 'reqres-free-v1'} 
  body=None 
  </msg>
-<msg timestamp="20251121 15:37:37.130" level="INFO">GET Response : url=https://reqres.in/api/users/2 
+<msg timestamp="20251121 17:23:31.255" level="INFO">GET Response : url=https://reqres.in/api/users/2 
  status=200, reason=OK 
- headers={'Date': 'Fri, 21 Nov 2025 14:37:37 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization, x-api-key', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Access-Control-Allow-Origin': 'http://localhost:5173', 'Etag': 'W/"334-l4nkyILfvcYPQGUAclAvJEuZIac"', 'Nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'Ratelimit-Limit': '100', 'Ratelimit-Policy': '100;w=60', 'Ratelimit-Remaining': '97', 'Ratelimit-Reset': '55', 'Referrer-Policy': 'strict-origin-when-cross-origin', 'Report-To': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=ywTOdyQ%2BGWeccqk9%2Fnj6Dd1vN2X0D%2BSlFe6e1e5zV8M%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1763735857"}],"max_age":3600}', 'Reporting-Endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=ywTOdyQ%2BGWeccqk9%2Fnj6Dd1vN2X0D%2BSlFe6e1e5zV8M%3D&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;ts=1763735857"', 'Server': 'cloudflare', 'Vary': 'Origin, accept-encoding', 'Via': '1.1 heroku-router', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'DENY', 'X-Powered-By': 'ReqRes.in - Deploy backends in 30 seconds', 'X-Reqres-Docs': 'https://reqres.in', 'X-Reqres-Message': 'This API is powered by ReqRes. Deploy your own backend in 30 seconds!', 'X-Reqres-Templates': 'https://app.reqres.in/templates', 'X-Reqres-Upgrade': 'https://app.reqres.in/upgrade', 'X-Request-Id': 'c35332c3-f3a4-430d-42a6-754a56e4b847', 'X-Xss-Protection': '1; mode=block', 'Cache-Control': 'max-age=14400', 'cf-cache-status': 'MISS', 'Content-Encoding': 'gzip', 'CF-RAY': '9a20ed12cb75663c-AMS'} 
+ headers={'Date': 'Fri, 21 Nov 2025 16:23:31 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization, x-api-key', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Access-Control-Allow-Origin': 'http://localhost:5173', 'Etag': 'W/"334-l4nkyILfvcYPQGUAclAvJEuZIac"', 'Nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'Ratelimit-Limit': '100', 'Ratelimit-Policy': '100;w=60', 'Ratelimit-Remaining': '97', 'Ratelimit-Reset': '55', 'Referrer-Policy': 'strict-origin-when-cross-origin', 'Report-To': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=ywTOdyQ%2BGWeccqk9%2Fnj6Dd1vN2X0D%2BSlFe6e1e5zV8M%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1763735857"}],"max_age":3600}', 'Reporting-Endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=ywTOdyQ%2BGWeccqk9%2Fnj6Dd1vN2X0D%2BSlFe6e1e5zV8M%3D&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;ts=1763735857"', 'Server': 'cloudflare', 'Vary': 'Origin, accept-encoding', 'Via': '1.1 heroku-router', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'DENY', 'X-Powered-By': 'ReqRes.in - Deploy backends in 30 seconds', 'X-Reqres-Docs': 'https://reqres.in', 'X-Reqres-Message': 'This API is powered by ReqRes. Deploy your own backend in 30 seconds!', 'X-Reqres-Templates': 'https://app.reqres.in/templates', 'X-Reqres-Upgrade': 'https://app.reqres.in/upgrade', 'X-Request-Id': 'c35332c3-f3a4-430d-42a6-754a56e4b847', 'X-Xss-Protection': '1; mode=block', 'Age': '6354', 'Cache-Control': 'max-age=14400', 'cf-cache-status': 'HIT', 'Content-Encoding': 'gzip', 'CF-RAY': '9a2188344ac677ce-AMS'} 
  body={"data":{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},"support":{"url":"https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."},"_meta":{"powered_by":"🚀 ReqRes - Deploy backends in 30 seconds","upgrade_url":"https://app.reqres.in/upgrade","docs_url":"https://reqres.in","template_gallery":"https://app.reqres.in/templates","message":"This API is powered by ReqRes. Deploy your own backend in 30 seconds!","features":["30 Second Backend Templates","Custom API Endpoints","Data Persistence","Real-time Analytics"],"upgrade_cta":"Upgrade to Pro for unlimited requests, custom endpoints, and data persistence"}} 
  </msg>
-<msg timestamp="20251121 15:37:37.130" level="INFO">C:\Users\mina.ebraheem\AppData\Local\Programs\Python\Python314\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg timestamp="20251121 17:23:31.255" level="INFO">C:\Users\mina.ebraheem\AppData\Local\Programs\Python\Python314\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg timestamp="20251121 15:37:37.131" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20251121 15:37:36.919" endtime="20251121 15:37:37.131"/>
+<msg timestamp="20251121 17:23:31.256" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20251121 17:23:31.124" endtime="20251121 17:23:31.256"/>
 </kw>
 <kw name="Status Should Be" library="RequestsLibrary">
 <arg>200</arg>
 <arg>${response}</arg>
 <doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" starttime="20251121 15:37:37.131" endtime="20251121 15:37:37.132"/>
+<status status="PASS" starttime="20251121 17:23:31.256" endtime="20251121 17:23:31.257"/>
 </kw>
 <kw name="To Json" library="RequestsLibrary">
 <var>${body}</var>
 <arg>${response.content}</arg>
 <doc>*DEPRECATED* Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</doc>
-<msg timestamp="20251121 15:37:37.132" level="WARN">Keyword 'RequestsLibrary.To Json' is deprecated. Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</msg>
-<msg timestamp="20251121 15:37:37.137" level="INFO">To JSON using : content={"data":{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},"support":{"url":"https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."},"_meta":{"powered_by":"🚀 ReqRes - Deploy backends in 30 seconds","upgrade_url":"https://app.reqres.in/upgrade","docs_url":"https://reqres.in","template_gallery":"https://app.reqres.in/templates","message":"This API is powered by ReqRes. Deploy your own backend in 30 seconds!","features":["30 Second Backend Templates","Custom API Endpoints","Data Persistence","Real-time Analytics"],"upgrade_cta":"Upgrade to Pro for unlimited requests, custom endpoints, and data persistence"}} </msg>
-<msg timestamp="20251121 15:37:37.137" level="INFO">To JSON using : pretty_print=False </msg>
-<msg timestamp="20251121 15:37:37.138" level="INFO">${body} = {'data': {'id': 2, 'email': 'janet.weaver@reqres.in', 'first_name': 'Janet', 'last_name': 'Weaver', 'avatar': 'https://reqres.in/img/faces/2-image.jpg'}, 'support': {'url': 'https://contentcaddy.io?ut...</msg>
-<status status="PASS" starttime="20251121 15:37:37.132" endtime="20251121 15:37:37.138"/>
+<msg timestamp="20251121 17:23:31.257" level="WARN">Keyword 'RequestsLibrary.To Json' is deprecated. Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</msg>
+<msg timestamp="20251121 17:23:31.262" level="INFO">To JSON using : content={"data":{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},"support":{"url":"https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."},"_meta":{"powered_by":"🚀 ReqRes - Deploy backends in 30 seconds","upgrade_url":"https://app.reqres.in/upgrade","docs_url":"https://reqres.in","template_gallery":"https://app.reqres.in/templates","message":"This API is powered by ReqRes. Deploy your own backend in 30 seconds!","features":["30 Second Backend Templates","Custom API Endpoints","Data Persistence","Real-time Analytics"],"upgrade_cta":"Upgrade to Pro for unlimited requests, custom endpoints, and data persistence"}} </msg>
+<msg timestamp="20251121 17:23:31.262" level="INFO">To JSON using : pretty_print=False </msg>
+<msg timestamp="20251121 17:23:31.262" level="INFO">${body} = {'data': {'id': 2, 'email': 'janet.weaver@reqres.in', 'first_name': 'Janet', 'last_name': 'Weaver', 'avatar': 'https://reqres.in/img/faces/2-image.jpg'}, 'support': {'url': 'https://contentcaddy.io?ut...</msg>
+<status status="PASS" starttime="20251121 17:23:31.257" endtime="20251121 17:23:31.262"/>
 </kw>
-<msg timestamp="20251121 15:37:37.139" level="INFO">${body} = {'data': {'id': 2, 'email': 'janet.weaver@reqres.in', 'first_name': 'Janet', 'last_name': 'Weaver', 'avatar': 'https://reqres.in/img/faces/2-image.jpg'}, 'support': {'url': 'https://contentcaddy.io?ut...</msg>
-<status status="PASS" starttime="20251121 15:37:36.919" endtime="20251121 15:37:37.139"/>
+<msg timestamp="20251121 17:23:31.263" level="INFO">${body} = {'data': {'id': 2, 'email': 'janet.weaver@reqres.in', 'first_name': 'Janet', 'last_name': 'Weaver', 'avatar': 'https://reqres.in/img/faces/2-image.jpg'}, 'support': {'url': 'https://contentcaddy.io?ut...</msg>
+<status status="PASS" starttime="20251121 17:23:31.124" endtime="20251121 17:23:31.263"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${email}</var>
 <arg>${body['data']['email']}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20251121 15:37:37.140" level="INFO">${email} = janet.weaver@reqres.in</msg>
-<status status="PASS" starttime="20251121 15:37:37.139" endtime="20251121 15:37:37.140"/>
+<msg timestamp="20251121 17:23:31.265" level="INFO">${email} = janet.weaver@reqres.in</msg>
+<status status="PASS" starttime="20251121 17:23:31.264" endtime="20251121 17:23:31.265"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${first_name}</var>
 <arg>${body['data']['first_name']}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20251121 15:37:37.141" level="INFO">${first_name} = Janet</msg>
-<status status="PASS" starttime="20251121 15:37:37.140" endtime="20251121 15:37:37.141"/>
+<msg timestamp="20251121 17:23:31.267" level="INFO">${first_name} = Janet</msg>
+<status status="PASS" starttime="20251121 17:23:31.266" endtime="20251121 17:23:31.267"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>API Session successfully created</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20251121 15:37:37.141" endtime="20251121 15:37:37.142"/>
+<status status="PASS" starttime="20251121 17:23:31.268" endtime="20251121 17:23:31.269"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Connectting to Database</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20251121 15:37:37.142" level="INFO">Connectting to Database</msg>
-<status status="PASS" starttime="20251121 15:37:37.142" endtime="20251121 15:37:37.142"/>
+<msg timestamp="20251121 17:23:31.270" level="INFO">Connectting to Database</msg>
+<status status="PASS" starttime="20251121 17:23:31.269" endtime="20251121 17:23:31.270"/>
 </kw>
 <kw name="Connect To Test Database" library="Db">
 <kw name="Connect To Database Using Custom Params" library="DatabaseLibrary">
@@ -98,17 +98,17 @@
 <arg>database='${DB_PATH}'</arg>
 <doc>*DEPRECATED* Use new `Connect To Database` keyword with custom parameters instead.
 The deprecated keyword will be removed in future versions.</doc>
-<msg timestamp="20251121 15:37:37.143" level="WARN">Keyword 'DatabaseLibrary.Connect To Database Using Custom Params' is deprecated. Use new `Connect To Database` keyword with custom parameters instead.
+<msg timestamp="20251121 17:23:31.271" level="WARN">Keyword 'DatabaseLibrary.Connect To Database Using Custom Params' is deprecated. Use new `Connect To Database` keyword with custom parameters instead.
 The deprecated keyword will be removed in future versions.</msg>
-<msg timestamp="20251121 15:37:37.156" level="INFO">Executing : Connect To Database Using Custom Params : sqlite3.connect(db_api_2.connect(database='C:/development/automation-Mini-project/automation-mini-project/db/test.db'))</msg>
-<status status="PASS" starttime="20251121 15:37:37.143" endtime="20251121 15:37:37.161"/>
+<msg timestamp="20251121 17:23:31.279" level="INFO">Executing : Connect To Database Using Custom Params : sqlite3.connect(db_api_2.connect(database='./Db/test.db'))</msg>
+<status status="PASS" starttime="20251121 17:23:31.271" endtime="20251121 17:23:31.281"/>
 </kw>
-<status status="PASS" starttime="20251121 15:37:37.143" endtime="20251121 15:37:37.161"/>
+<status status="PASS" starttime="20251121 17:23:31.271" endtime="20251121 17:23:31.282"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Database successfully connected</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20251121 15:37:37.161" endtime="20251121 15:37:37.161"/>
+<status status="PASS" starttime="20251121 17:23:31.282" endtime="20251121 17:23:31.283"/>
 </kw>
 <kw name="Insert User Into Db" library="Db">
 <arg>${first_name}</arg>
@@ -116,11 +116,11 @@ The deprecated keyword will be removed in future versions.</msg>
 <kw name="Execute Sql String" library="DatabaseLibrary">
 <arg>INSERT INTO users(name, email) VALUES ('${name}', '${email}');</arg>
 <doc>Executes the ``sql_string`` as a single SQL command.</doc>
-<msg timestamp="20251121 15:37:37.162" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;INSERT INTO users(name, email) VALUES ('Janet', 'janet.weaver@reqres.in');&lt;/code&gt;</msg>
-<msg timestamp="20251121 15:37:37.168" level="INFO">Commit the transaction</msg>
-<status status="PASS" starttime="20251121 15:37:37.162" endtime="20251121 15:37:37.174"/>
+<msg timestamp="20251121 17:23:31.284" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;INSERT INTO users(name, email) VALUES ('Janet', 'janet.weaver@reqres.in');&lt;/code&gt;</msg>
+<msg timestamp="20251121 17:23:31.288" level="INFO">Commit the transaction</msg>
+<status status="PASS" starttime="20251121 17:23:31.284" endtime="20251121 17:23:31.294"/>
 </kw>
-<status status="PASS" starttime="20251121 15:37:37.162" endtime="20251121 15:37:37.174"/>
+<status status="PASS" starttime="20251121 17:23:31.283" endtime="20251121 17:23:31.294"/>
 </kw>
 <kw name="Get Any User From Db" library="Db">
 <var>${user_row}</var>
@@ -130,45 +130,45 @@ The deprecated keyword will be removed in future versions.</msg>
 <doc>Runs a query with the ``select_statement`` and returns the result as list of rows.
 The type of row values depends on the database module -
 usually they are tuples or tuple-like objects.</doc>
-<msg timestamp="20251121 15:37:37.175" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;SELECT id, name, email FROM users LIMIT 1;&lt;/code&gt;</msg>
-<msg timestamp="20251121 15:37:37.175" level="INFO">Commit the transaction</msg>
-<msg timestamp="20251121 15:37:37.175" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto; max-height: 500px; overflow-y: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 1 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="position: sticky; top: 0; color:black; background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;id&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;name&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;email&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;1&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;standard_user&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;standard_user@example.com&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
-<msg timestamp="20251121 15:37:37.175" level="INFO">${rows} = [(1, 'standard_user', 'standard_user@example.com')]</msg>
-<status status="PASS" starttime="20251121 15:37:37.175" endtime="20251121 15:37:37.175"/>
+<msg timestamp="20251121 17:23:31.295" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;SELECT id, name, email FROM users LIMIT 1;&lt;/code&gt;</msg>
+<msg timestamp="20251121 17:23:31.295" level="INFO">Commit the transaction</msg>
+<msg timestamp="20251121 17:23:31.295" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto; max-height: 500px; overflow-y: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 1 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="position: sticky; top: 0; color:black; background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;id&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;name&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;email&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;1&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;standard_user&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;standard_user@example.com&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg timestamp="20251121 17:23:31.295" level="INFO">${rows} = [(1, 'standard_user', 'standard_user@example.com')]</msg>
+<status status="PASS" starttime="20251121 17:23:31.295" endtime="20251121 17:23:31.295"/>
 </kw>
-<msg timestamp="20251121 15:37:37.175" level="INFO">${user_row} = [(1, 'standard_user', 'standard_user@example.com')]</msg>
-<status status="PASS" starttime="20251121 15:37:37.174" endtime="20251121 15:37:37.175"/>
+<msg timestamp="20251121 17:23:31.295" level="INFO">${user_row} = [(1, 'standard_user', 'standard_user@example.com')]</msg>
+<status status="PASS" starttime="20251121 17:23:31.294" endtime="20251121 17:23:31.295"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>User from DB: ${user_row}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20251121 15:37:37.176" endtime="20251121 15:37:37.176"/>
+<status status="PASS" starttime="20251121 17:23:31.296" endtime="20251121 17:23:31.296"/>
 </kw>
 <kw name="Disconnect From Test Database" library="Db">
 <kw name="Disconnect From Database" library="DatabaseLibrary">
 <doc>Disconnects from the database.</doc>
-<status status="PASS" starttime="20251121 15:37:37.177" endtime="20251121 15:37:37.177"/>
+<status status="PASS" starttime="20251121 17:23:31.297" endtime="20251121 17:23:31.297"/>
 </kw>
-<status status="PASS" starttime="20251121 15:37:37.177" endtime="20251121 15:37:37.177"/>
+<status status="PASS" starttime="20251121 17:23:31.297" endtime="20251121 17:23:31.297"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Logging to Demo Site</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20251121 15:37:37.178" endtime="20251121 15:37:37.178"/>
+<status status="PASS" starttime="20251121 17:23:31.298" endtime="20251121 17:23:31.298"/>
 </kw>
 <kw name="Open Demo Site" library="Browser">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${BASE_URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20251121 15:37:37.179" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
-<status status="PASS" starttime="20251121 15:37:37.178" endtime="20251121 15:37:40.913"/>
+<msg timestamp="20251121 17:23:31.300" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20251121 17:23:31.300" endtime="20251121 17:23:34.143"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20251121 15:37:40.913" endtime="20251121 15:37:40.953"/>
+<status status="PASS" starttime="20251121 17:23:34.143" endtime="20251121 17:23:34.176"/>
 </kw>
-<status status="PASS" starttime="20251121 15:37:37.178" endtime="20251121 15:37:40.953"/>
+<status status="PASS" starttime="20251121 17:23:31.299" endtime="20251121 17:23:34.176"/>
 </kw>
 <kw name="Login With Credentials" library="Browser">
 <arg>standard_user</arg>
@@ -177,50 +177,50 @@ usually they are tuples or tuple-like objects.</doc>
 <arg>id=user-name</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20251121 15:37:40.955" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
-<status status="PASS" starttime="20251121 15:37:40.954" endtime="20251121 15:37:41.137"/>
+<msg timestamp="20251121 17:23:34.178" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20251121 17:23:34.177" endtime="20251121 17:23:34.330"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=password</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20251121 15:37:41.138" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
-<status status="PASS" starttime="20251121 15:37:41.138" endtime="20251121 15:37:41.239"/>
+<msg timestamp="20251121 17:23:34.331" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20251121 17:23:34.330" endtime="20251121 17:23:34.438"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id=login-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20251121 15:37:41.239" level="INFO">Clicking button 'id=login-button'.</msg>
-<status status="PASS" starttime="20251121 15:37:41.239" endtime="20251121 15:37:41.367"/>
+<msg timestamp="20251121 17:23:34.438" level="INFO">Clicking button 'id=login-button'.</msg>
+<status status="PASS" starttime="20251121 17:23:34.438" endtime="20251121 17:23:34.554"/>
 </kw>
-<status status="PASS" starttime="20251121 15:37:40.954" endtime="20251121 15:37:41.367"/>
+<status status="PASS" starttime="20251121 17:23:34.177" endtime="20251121 17:23:34.554"/>
 </kw>
 <kw name="Inventory Page Should Be Visible" library="Browser">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>css=.inventory_list</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20251121 15:37:41.368" endtime="20251121 15:37:41.381"/>
+<status status="PASS" starttime="20251121 17:23:34.555" endtime="20251121 17:23:34.567"/>
 </kw>
-<status status="PASS" starttime="20251121 15:37:41.368" endtime="20251121 15:37:41.381"/>
+<status status="PASS" starttime="20251121 17:23:34.555" endtime="20251121 17:23:34.567"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20251121 15:37:44.382" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20251121 15:37:41.381" endtime="20251121 15:37:44.382"/>
+<msg timestamp="20251121 17:23:37.568" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20251121 17:23:34.567" endtime="20251121 17:23:37.568"/>
 </kw>
 <kw name="Close Browser Session" library="Browser">
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20251121 15:37:44.383" endtime="20251121 15:37:46.716"/>
+<status status="PASS" starttime="20251121 17:23:37.569" endtime="20251121 17:23:39.756"/>
 </kw>
-<status status="PASS" starttime="20251121 15:37:44.383" endtime="20251121 15:37:46.716"/>
+<status status="PASS" starttime="20251121 17:23:37.569" endtime="20251121 17:23:39.756"/>
 </kw>
 <doc>Get user from API, store in DB, then use UI login</doc>
-<status status="PASS" starttime="20251121 15:37:36.916" endtime="20251121 15:37:46.718"/>
+<status status="PASS" starttime="20251121 17:23:31.121" endtime="20251121 17:23:39.757"/>
 </test>
-<status status="PASS" starttime="20251121 15:37:36.405" endtime="20251121 15:37:46.723"/>
+<status status="PASS" starttime="20251121 17:23:30.783" endtime="20251121 17:23:39.760"/>
 </suite>
 <statistics>
 <total>
@@ -233,8 +233,8 @@ usually they are tuples or tuple-like objects.</doc>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20251121 15:37:37.132" level="WARN">Keyword 'RequestsLibrary.To Json' is deprecated. Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</msg>
-<msg timestamp="20251121 15:37:37.143" level="WARN">Keyword 'DatabaseLibrary.Connect To Database Using Custom Params' is deprecated. Use new `Connect To Database` keyword with custom parameters instead.
+<msg timestamp="20251121 17:23:31.257" level="WARN">Keyword 'RequestsLibrary.To Json' is deprecated. Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</msg>
+<msg timestamp="20251121 17:23:31.271" level="WARN">Keyword 'DatabaseLibrary.Connect To Database Using Custom Params' is deprecated. Use new `Connect To Database` keyword with custom parameters instead.
 The deprecated keyword will be removed in future versions.</msg>
 </errors>
 </robot>

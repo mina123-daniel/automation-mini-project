@@ -30,8 +30,7 @@ jobs:
 
       # 4) Create the Database
       - name: Create the database
-        working-directory: Db/
-        run:  python create_db.py
+        run:  python ./Db/create_db.py
 
       # 5) Install browser for Selenium (Chrome)
       - name: Install Chrome
@@ -43,11 +42,11 @@ jobs:
       # 6) Run Robot Tests
       - name: Run Robot Tests
         run: |
-          robot -d results tests
+          robot -d Results tests
 
       # 7) Upload artifacts (logs + report + screenshots)
       - name: Upload Test Reports
         uses: actions/upload-artifact@v4
         with:
           name: robot-test-results
-          path: results/
+          path: Results/
