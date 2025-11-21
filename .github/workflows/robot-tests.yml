@@ -30,8 +30,8 @@ jobs:
 
       # 4) Create the Database
       - name: Create the database
-        run:  cd ./DB 
-              python create_db.py
+        working-directory: Db/
+        run:  python create_db.py
 
       # 5) Install browser for Selenium (Chrome)
       - name: Install Chrome
